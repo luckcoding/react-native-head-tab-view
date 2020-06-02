@@ -1,0 +1,20 @@
+{
+  "name": "react-native-head-tab-view",
+  "version": "1.0.0",
+  "description": "带有头部组件，可以整体上下滑动的标签页组件   点击跳转[博客文章](https://www.jianshu.com/p/222716d8a0a2)",
+  "main": "Example/react-native-head-tab-view/index.js",
+  "types": "Example/react-native-head-tab-view/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luckcoding/react-native-head-tab-view.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luckcoding/react-native-head-tab-view/issues"
+  },
+  "homepage": "https://github.com/luckcoding/react-native-head-tab-view#readme"
+}
