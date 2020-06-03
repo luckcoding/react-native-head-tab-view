@@ -98,12 +98,11 @@ export default class TabView extends React.PureComponent {
         return (
             <View style={{ flex: 1 }} onLayout={this.containerOnLayout}>
                 {this._renderFrozeView()}
-                {headerRespond ? null : this._renderScrollHead()}
                 {this._renderTabBar()}
                 {this._renderHeader()}
                 {this._renderContent()}
                 {this._renderFooter()}
-                {headerRespond ? this._renderScrollHead() : null}
+                {this._renderScrollHead()}
             </View>
         )
     }
@@ -153,9 +152,7 @@ export default class TabView extends React.PureComponent {
         if (!renderScrollHeader) return null
         const { containerTrans, sceneWidth } = this.state;
         const headerHeight = makeHeaderHeight() - frozeTop
-        return <ScrollHeader
-            headerTrans={this.state.headerTrans}
-            onPanResponderGrant={this.onPanResponderGrant}
+        return <Animated.View
             style={{
                 position: 'absolute',
                 top: 0,
@@ -168,7 +165,7 @@ export default class TabView extends React.PureComponent {
                 }]
             }} >
             {renderScrollHeader()}
-        </ScrollHeader>
+        </Animated.View>
 
     }
 
